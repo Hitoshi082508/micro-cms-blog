@@ -4,4 +4,6 @@ body {
     'Hiragino Sans', Meiryo, sans-serif;
   width: 100%;
   min-height: 100vh;
+  background: transparent linear-gradient(180deg, #4594d7 0%, #94d0e9 100%) 0%
+    0% no-repeat padding-box;
 }
