@@ -8,6 +8,9 @@ export const IndexBase: React.FC<Props> = ({ className }) => {
 }
 export const Index = styled(IndexBase)`
   font-size: 100px;
+  ${({ theme }) => theme.media.sp`
+    font-size: 20px;
+  `}
 `
 
 export default Index
