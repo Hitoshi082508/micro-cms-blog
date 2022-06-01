@@ -11,7 +11,12 @@ export const FCProfile: React.FC<Props> = ({ className }) => {
       <h1>Profile</h1>
       <div className={`${className}__container`}>
         <div className={`${className}__box`}>
-          <Image src="/hitoshi.jpg" width={300} height={300} />
+          <Image
+            src="/hitoshi.jpg"
+            width={300}
+            height={300}
+            alt="中澤仁志のイラスト"
+          />
           <div className={`${className}__text-container`}>
             <h4 className={`${className}__name`}>中澤 仁志</h4>
             <p className={`${className}__english-name`}>Hitoshi Nakazawa</p>
