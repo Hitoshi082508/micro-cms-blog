@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { client } from 'src/lib/client'
-import { Blog } from 'src/types'
+import { Posts } from 'src/types'
 
 export const getStaticPaths = async () => {
   const data = await client.get({ endpoint: 'blogs' })
@@ -12,7 +12,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
   const id: string = context.params.id
-  const data: Blog = await client.get({ endpoint: 'blogs', contentId: id })
+  const data: Posts = await client.get({ endpoint: 'blogs', contentId: id })
 
   return {
     props: {
@@ -23,7 +23,7 @@ export const getStaticProps = async (context) => {
 
 type Props = {
   className?: string
-  blog: Blog
+  blog: Posts
 }
 
 export const IndexIdBase: React.FC<Props> = ({ className, blog }) => {

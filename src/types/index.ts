@@ -1,6 +1,9 @@
-export type Blog = {
+export type Posts = {
   id: string
   title: string
+  tag: string
+  companyName: string
+  skill: string
   eyecatch: {
     url: string
     height: number
