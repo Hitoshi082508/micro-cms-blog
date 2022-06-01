@@ -51,6 +51,7 @@ export const Profile = styled(FCProfile)`
     font-size: 100px;
     color: #fff;
     margin-bottom: -25px;
+    font-weight: bold;
     ${({ theme }) => theme.media.sp`
       font-size: 50px;
       margin-bottom: -15px;
