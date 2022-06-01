@@ -6,6 +6,7 @@ import { Blog } from 'src/types/index'
 import { FirstView } from 'src/components/templates/FirstView'
 import { Profile } from 'src/components/templates/Profile'
 import { Contact } from 'src/components/templates/Contact'
+import { Footer } from 'src/components/templates/Footer'
 
 export const getStaticProps = async () => {
   const data = await client.get({ endpoint: 'blogs' })
@@ -27,7 +28,6 @@ export const IndexBase: React.FC<Props> = ({ className, blog }) => {
     <div className={className}>
       <FirstView />
       <Profile />
-      <Contact />
       {blog.map((item, index) => {
         return (
           <Link href={`/${item.id}`} key={index}>
@@ -35,6 +35,8 @@ export const IndexBase: React.FC<Props> = ({ className, blog }) => {
           </Link>
         )
       })}
+      <Contact />
+      <Footer />
     </div>
   )
 }
