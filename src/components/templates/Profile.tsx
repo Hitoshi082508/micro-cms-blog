@@ -57,7 +57,7 @@ export const Profile = styled(FCProfile)`
     `}
   }
   &__container {
-    width: 85%;
+    width: 97%;
     height: 500px;
     background-color: #fff;
     border-radius: 40px;

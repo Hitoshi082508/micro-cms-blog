@@ -5,6 +5,7 @@ import { client } from 'src/lib/client'
 import { Blog } from 'src/types/index'
 import { FirstView } from 'src/components/templates/FirstView'
 import { Profile } from 'src/components/templates/Profile'
+import { Contact } from 'src/components/templates/Contact'
 
 export const getStaticProps = async () => {
   const data = await client.get({ endpoint: 'blogs' })
@@ -26,6 +27,7 @@ export const IndexBase: React.FC<Props> = ({ className, blog }) => {
     <div className={className}>
       <FirstView />
       <Profile />
+      <Contact />
       {blog.map((item, index) => {
         return (
           <Link href={`/${item.id}`} key={index}>
