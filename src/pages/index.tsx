@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Link from 'next/link'
 import { client } from 'src/lib/client'
 import { Blog } from 'src/types/index'
+import { FirstView } from 'src/components/templates/FirstView'
 
 export const getStaticProps = async () => {
   const data = await client.get({ endpoint: 'blogs' })
@@ -22,6 +23,7 @@ type Props = {
 export const IndexBase: React.FC<Props> = ({ className, blog }) => {
   return (
     <div className={className}>
+      <FirstView />
       {blog.map((item, index) => {
         return (
           <Link href={`/${item.id}`} key={index}>
@@ -32,11 +34,6 @@ export const IndexBase: React.FC<Props> = ({ className, blog }) => {
     </div>
   )
 }
-export const Index = styled(IndexBase)`
-  font-size: 100px;
-  ${({ theme }) => theme.media.sp`
-    font-size: 20px;
-  `}
-`
+export const Index = styled(IndexBase)``
 
 export default Index
