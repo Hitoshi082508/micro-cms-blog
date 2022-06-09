@@ -43,7 +43,7 @@ export const FCContact: React.FC<Props> = ({ className }) => {
   }
   return (
     <div className={className}>
-      <Title text="Contact" />
+      <Title text="コンタクト" />
       <form className={`${className}__container`} onSubmit={submit}>
         <Question text="あなたの名前を教えてください！" />
         <AnswerInput
